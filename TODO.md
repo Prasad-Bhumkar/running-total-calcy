@@ -1,5 +1,5 @@
 - [x] Update vite.config.js to add base: '/running-total-calcy/'
 - [x] Create .github/workflows/deploy.yml with deployment workflow
-- [ ] Commit and push changes to GitHub
+- [x] Commit and push changes to GitHub
 - [ ] Enable GitHub Pages in repository settings (source: GitHub Actions)
 - [ ] Verify deployment at https://prasad-bhumkar.github.io/running-total-calcy/
