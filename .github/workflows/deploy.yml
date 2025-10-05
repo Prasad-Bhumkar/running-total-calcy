@@ -10,19 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout source branch
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Required for gh-pages to work properly
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '22'
 
-
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Build
+      - name: Build project
         run: npm run build
 
       - name: Deploy to GitHub Pages
@@ -31,3 +32,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
+          cname: prasad-bhumkar.github.io  # Optional: if using a custom domain
