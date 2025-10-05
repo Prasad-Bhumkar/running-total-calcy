@@ -32,4 +32,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
-          cname: prasad-bhumkar.github.io  # Optional: if using a custom domain
+          cname: prasad-bhumkar.github.io  # Optional: if using a custom domain name
